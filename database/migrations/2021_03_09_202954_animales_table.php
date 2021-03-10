@@ -16,6 +16,7 @@ class AnimalesTable extends Migration
         Schema::create('Animales', function (Blueprint $table) {
             $table->id();
             $table->string('Nombre');
+            $table->string('Animal');
             $table->string('Especie');
             $table->string('PaisOrigen');
             $table->string('PaisesDondeHabitan');
