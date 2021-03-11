@@ -10,11 +10,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/DatosAnimales',[APIcontroller::class, 'VerAnimal']);
 
-//Route::post('/DatosAnimales',[APIcontroller::class, 'CrearP']);
+Route::post('/DatosAnimales',[APIcontroller::class, 'CrearP']);
 
 Route::get('/DatosPersonal',[APIcontroller::class, 'VerPersonal']); 
 
-//Route::post('/DatosPersonal',[APIcontroller::class, 'CrearU']);
-
-
-
+Route::post('/DatosPersonal',[APIcontroller::class, 'CrearU']);
