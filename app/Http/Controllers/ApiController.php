@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Animal;
-use App\Models\Persona;
+use App\Models\Personal;
 use App\Models\User; 
 
 class ApiController extends Controller 
@@ -28,7 +28,7 @@ class ApiController extends Controller
     public function AgregarPersona(request $request)
     {
    
-        $persona = Persona::create($request->all());
+        $persona = Personal::create($request->all());
         return $persona;
 
     }
@@ -37,25 +37,12 @@ class ApiController extends Controller
     public function VerPersonal()
     {
 
-        $persona = Persona::all();
+        $persona = Personal::all();
         return $persona;
     }
 }
 
 
-            //$table->id();
-            //$table->integer('Nombre');
-            //$table->string('Apellido');
-            //$table->float('Trabajo');
-            //$table->timestamps();
+           
 
-           // $table->id();
-            //$table->string('Nombre');
-            //$table->string('Tipo');
-            //$table->string('Especie');
-            //$table->string('PaisOrigen');
-            //$table->string('ZonasDondeHabitan');
-            //$table->string('Alimentacion');
-            //$table->integer('Edad');
-            //$table->string('URLfoto');
-            //$table->timestamps(); 
+ 
