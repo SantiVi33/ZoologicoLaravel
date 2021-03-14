@@ -18,10 +18,16 @@ class ApiController extends Controller
     }
 
     
-    public function VerAnimal()
+    public function VerAnimales()
     {
 
         $animal = Animal::all();
+        return $animal;
+    }
+
+    public function VerAnimal($id)
+    {
+        $animal = Animal::findOrFail($id);
         return $animal;
     }
 

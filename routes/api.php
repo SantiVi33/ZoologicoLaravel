@@ -8,7 +8,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/DatosAnimales',[APIcontroller::class, 'VerAnimal']);
+Route::get('/DatosAnimales',[APIcontroller::class, 'VerAnimales']);
+
+Route::get('/DatosAnimales/{id}',[APIcontroller::class, 'VerAnimal']);
 
 Route::post('/DatosAnimales',[APIcontroller::class, 'AgregarAnimal']);
 
