@@ -17,3 +17,5 @@ Route::post('/DatosAnimales',[APIcontroller::class, 'AgregarAnimal']);
 Route::get('/DatosPersonal',[APIcontroller::class, 'VerPersonal']); 
 
 Route::post('/DatosPersonal',[APIcontroller::class, 'AgregarPersona']);
+
+Route::delete('/DatosAnimales/{id}',[APIcontroller::class, 'EliminarAnimal']);

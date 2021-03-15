@@ -46,6 +46,11 @@ class ApiController extends Controller
         $persona = Personal::all();
         return $persona;
     }
+
+    public function EliminarAnimal($id) {
+        $res = Animal::destroy($id);
+        return '{"res":"'.$res.'","msg":"Eliminado"}';
+    }
 }
 
 
