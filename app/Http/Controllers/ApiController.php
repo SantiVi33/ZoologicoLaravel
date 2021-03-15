@@ -51,6 +51,17 @@ class ApiController extends Controller
         $res = Animal::destroy($id);
         return '{"res":"'.$res.'","msg":"Eliminado"}';
     }
+
+    public function VerUsuarios()
+    {
+        $usuarios = User::all();
+        return $usuarios;
+    }
+
+    public function AgregarUsuario(request $request) {
+        $usuario = User::create($request->all());
+        return $usuario;
+    }
 }
 
 

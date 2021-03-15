@@ -14,8 +14,13 @@ Route::get('/DatosAnimales/{id}',[APIcontroller::class, 'VerAnimal']);
 
 Route::post('/DatosAnimales',[APIcontroller::class, 'AgregarAnimal']);
 
+Route::delete('/DatosAnimales/{id}',[APIcontroller::class, 'EliminarAnimal']);
+
 Route::get('/DatosPersonal',[APIcontroller::class, 'VerPersonal']); 
 
 Route::post('/DatosPersonal',[APIcontroller::class, 'AgregarPersona']);
 
-Route::delete('/DatosAnimales/{id}',[APIcontroller::class, 'EliminarAnimal']);
+Route::get('/DatosUsuarios',[APIcontroller::class, 'VerUsuarios']);
+
+Route::post('/DatosUsuarios',[APIcontroller::class, 'AgregarUsuario']);
+
