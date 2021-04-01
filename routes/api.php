@@ -24,3 +24,5 @@ Route::get('/DatosUsuarios',[APIcontroller::class, 'VerUsuarios']);
 
 Route::post('/DatosUsuarios',[APIcontroller::class, 'AgregarUsuario']);
 
+Route::post('/DatosUsuarios/login',[APIcontroller::class, 'login']);
+
