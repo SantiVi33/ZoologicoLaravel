@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Models\Animal;
 use App\Models\Personal;
-use App\Models\User; 
+use App\Models\User;  
 
 
 
