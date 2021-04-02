@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 use App\Models\Animal;
 use App\Models\Personal;
-use App\Models\User;  
+use App\Models\User; 
 
 
 
@@ -63,8 +64,16 @@ class ApiController extends Controller
     }
 
     public function AgregarUsuario(request $request) {
-        $usuario = User::create($request->all());
-        return $usuario;
+        return User::create([
+            'Nombre' => $request['Nombre'],
+            'Apellido' => $request['Apellido'],
+            'TipDocumento' => $request['TipDocumento'],
+            'NroDocumento' => $request['NroDocumento'],
+            'Email' => $request['Email'],
+            'Usuario' => $request['Usuario'],
+            'password' => Hash::make($request['password']),
+            'Rango' => $request['Rango'],
+        ]);
     }
 
     public function login(request $request) {
