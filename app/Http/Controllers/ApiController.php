@@ -78,12 +78,12 @@ class ApiController extends Controller
 
     public function login(request $request) {
        $request->validate([
-           'email'       => 'required|string|email',
+           'Usuario'       => 'required|string',
            'password'    => 'required',
            'remember_me' => 'boolean'
        ]);
 
-       $credentials = request(['email','password']);
+       $credentials = request(['Usuario','password']);
        if(!Auth::attempt($credentials)) {
            return response()->json([
              'message' => 'Unauthorized'],401);
